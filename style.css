@@ -1,0 +1,263 @@
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+
+h1, h2 {
+    font-family: 'Catamaran', sans-serif;
+    text-align: center;
+    color: var(--main-white);
+}
+
+p {
+    font-family: auto;
+}
+
+img {
+    display: block;
+}
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+
+#navbar {
+    display: flex;
+    background-color: var(--main-red);
+    justify-content: flex-end;
+    position: fixed;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    width: 100%;
+    top: 0;
+    left: 0; 
+}
+
+
+
+#nav-list {
+    display: flex;
+    margin-right: 2rem;
+}
+
+#nav-list a:hover {
+    background: var(--main-blue);
+}
+
+#nav-list a{
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    transition: background .3s ease-out;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #3a3d40 0%, #181719 100%);
+    background-color: black;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#welcome-section p {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 200;
+    color: var(--main-red);
+}
+
+.projects_section {
+    text-align: center;
+    background: var(--main-blue);
+    padding: 10rem 2rem;
+}
+
+.project_section_header {
+    border-bottom: 0.2rem solid var(--main-white);
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+}
+
+
+.project {
+    background: var(--main-gray);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 5%;
+    transition: box-shadow .3s ease-out;
+}
+
+
+.project:hover .code{
+color: #ff751a;
+}
+
+.project:hover {
+    box-shadow: 5px -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project_img {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+}
+
+p.project-title {
+    font-family: cursive;
+    font-size: 2rem;
+    padding: 2rem .5rem;
+}
+
+.code {
+    color: var(--main-gray);
+    transition: color .3s ease-out;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    background: var(--main-gray);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.contact-section-header h2 {
+    font-size: 6rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 2px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+transform: translateY(8px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 2px;
+}
+
+footer {
+    display: flex;
+    font-weight: 300;
+    background: var(--main-gray);
+    justify-content: flex-end;
+    padding: 2rem 15rem;
+    border-top: 4px solid var(--main-red);
+}
+
+footer p {
+    font-size: 18px;
+    color: var(--main-white);
+}
+
+
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 750px / 16px = 46.875em */
+@media (max-width: 46.875em) {
+    footer {
+        justify-content: center;
+        padding: 2rem;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+
+    #navbar {
+        justify-content: center;
+    }
+
+    #nav-list {
+        margin-right: 0;
+    }
+}
+
+/* 490px / 16px = 30.625em */
+@media (max-width: 30.625em) {
+    .project_grid {
+        grid-template-columns: 1fr;
+    }
+}
